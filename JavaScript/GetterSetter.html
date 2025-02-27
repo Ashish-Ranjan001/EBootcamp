@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> OOPs</title>
+    </head>
+    <body>
+        <h2> OOPS Features</h2>
+        <script>
+            class Car{
+               constructor(_name){
+                this.fname=_name;
+               }
+               get name(){
+                   return this.fname;
+               }
+               set name(newName){
+                  this.fname=newName
+               }
+            }
+            const obj=new Car("sumit");
+            console.log(obj.name);//sumit
+            obj.name="amit";
+            console.log(obj.name);//amit
+           
+        </script>
+    </body>
+</html>
+ 

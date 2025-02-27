@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //call fn
+//         const person = {
+//   fullName: function() {
+//     return this.firstName + " " + this.lastName;
+//   }
+// }
+// const person1 = {
+//   firstName:"Ashish",
+//   lastName: "Ranjan"
+// }
+// const person2 = {
+//   firstName:"Ranjan",
+//   lastName: "Ashish"
+// }
+// console.log(person.fullName.call(person2));
+
+const array = [19090, 27889, 37677, 45000,89000];
+// const initialValue = 0;
+const sumsalary = array.reduce(
+  (accumulator, currentValue) => accumulator + currentValue
+//   initialValue,
+);
+console.log(sumsalary);
+
+let empData=[
+              {id:1,name:"A",age:23,salary:78899},
+              {id:2,name:"B",age:33,salary:47889},
+              {id:3,name:"C",age:29,salary:67889},
+              {id:4,name:"D",age:35,salary:37889}
+           ];
+        //    let result=empData.filter(emp=> emp.salary>=45000 && emp.age>30);
+        //    console.log(result);
+        let sum=empData.reduce((a,b)=>{
+               return a+b.salary
+           },0)
+           console.log(sum);
+    </script>
+</body>
+</html>
