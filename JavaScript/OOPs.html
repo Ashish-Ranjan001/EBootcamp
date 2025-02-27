@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> OOPs</title>
+    </head>
+    <body>
+        <h2> OOPS Features</h2>
+        <script>
+            class Car{
+                constructor(){
+                    this.speed=90;
+                }
+                acc(){
+                    this.speed+=70;
+                }
+                checkSpeed(){
+                    console.log(`The speed is ${this.speed}`);
+                }
+            }
+            class bus{
+                constructor(){
+                    this.speed=50;
+                }
+                acc(){
+                    this.speed+=50;
+                }
+                checkSpeed(){
+                    console.log(this.speed);
+                }
+            }
+            const obj=new Car();
+            const objb = new bus();
+            obj.acc();
+            objb.speed();
+            obj.checkSpeed();
+            obj.acc();
+            obj.checkSpeed();
+        </script>
+    </body>
+</html>
+ 

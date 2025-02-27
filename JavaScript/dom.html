@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Program</title>
+</head>
+<body>
+    <h2>JavaScript Dom Programs</h2>
+    <ul id="menu"></ul>
+    <button id="btn">Click Here</button>
+    <script>
+        let btn = document.getElementById("btn");
+        let menu = document.getElementById("menu");
+        let categories = ["mens", "womens", "kids"];
+        let index = 0; // Initialize a counter
+
+        btn.addEventListener("click", () => {
+            if (index < categories.length) { 
+                let li = document.createElement("li"); 
+                li.textContent = categories[index]; 
+                menu.appendChild(li); 
+                index++; 
+            }
+        });
+    </script>
+</body>
+</html>

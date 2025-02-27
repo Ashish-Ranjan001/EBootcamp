@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> JavaScript Program</title>
+    </head>
+    <body>
+        <h2> JavaScript Dom Programs</h2>
+        <p id="target">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis ea sed veniam nesciunt quibusdam ducimus excepturi rem quas corporis voluptatum rerum quo eligendi in sit ipsam, illum doloremque! Nam.
+        </p>
+        <button id="btn"> Click Here</button>
+        <button id="btn1">Ok</button>
+        <button id="btn2">Yellow</button>
+        <button id="btn3">Blue</button>
+        <script>
+           //get para and button
+           let para=document.getElementById("target");
+           let btn=document.getElementById("btn");
+           let okbtn=document.getElementById("btn1");
+           let ybtn=document.getElementById("btn2");
+           let bbtn=document.getElementById("btn3");
+           //perform click event in btn
+           btn.addEventListener("click",()=>{
+              //read content from para
+              let data=para.innerHTML;//get data
+              alert(data);
+              //set data in para
+              para.innerHTML="<b>n this reference page, you will find all the Array methods and their properties. For example, the sort() method of an Array is used to sort all the elements of that array using default or custom sorting rules.</b>";
+              //change style
+              para.style.color="green"
+           })
+           okbtn.addEventListener("click",()=>{
+            let dataa=para.innerHTML;
+            alert(dataa);
+            para.innerHTML="Ashish Ranjan";
+            para.style.color="Red";
+           })
+
+           ybtn.addEventListener("click",()=>{
+            let dataa=para.innerHTML;
+            alert(dataa);
+            para.innerHTML="Ashish Ranjan";
+            para.style.color="Yellow";})
+
+            bbtn.addEventListener("click",()=>{
+            let dataa=para.innerHTML;
+            alert(dataa);
+            para.innerHTML="Ashish Ranjan";
+            para.style.color="Blue";})
+
+            
+        </script>
+    </body>
+</html>
+ 

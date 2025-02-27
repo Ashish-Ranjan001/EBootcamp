@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #main {
+            align-content: center;
+            height: 400px;
+            width: 400px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #heading {
+            margin-bottom: 20px;
+        }
+
+        #button {
+            display: flex;
+            justify-content: space-between;
+            background-color: lightcoral;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            flex: 1;
+            margin: 0 5px;
+            padding: 10px;
+            background-color: #ff7f7f;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff4f4f;
+        }
+
+        #feild {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        input[type="number"] {
+            width: calc(100% - 10px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h1 id="heading">Calculator</h1>
+        <div id="feild">
+            <input type="number" id="num1" placeholder="Enter first number">
+            <input type="number" id="num2" placeholder="Enter second number">
+            <input type="number" id="Result" placeholder="Result" readonly>
+        </div>
+        <div id="button">
+            <button id="sum">Sum</button>
+            <button id="subtract">Subtract</button>
+            <button id="Multiply">Multiply</button>
+            <button id="Division">Division</button>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById("sum").addEventListener("click", function() {
+            calculate('sum');
+        });
+        document.getElementById("subtract").addEventListener("click", function() {
+            calculate('subtract');
+        });
+        document.getElementById("Multiply").addEventListener("click", function() {
+            calculate('multiply');
+        });
+        document.getElementById("Division").addEventListener("click", function() {
+            calculate('divide');
+        });
+
+        function calculate(operation) {
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let result = 0;
+            
+            if (isNaN(num1) || isNaN(num2)) {
+                alert('Please enter valid numbers');
+                return;
+            }
+
+            switch (operation) {
+                case 'sum':
+                    result = num1 + num2;
+                    break;
+                case 'subtract':
+                    result = num1 - num2;
+                    break;
+                case 'multiply':
+                    result = num1 * num2;
+                    break;
+                case 'divide':
+                    if (num2 === 0) {
+                        alert('Cannot divide by zero');
+                        return;
+                    }
+                    result = num1 / num2;
+                    break;
+            }
+            document.getElementById('Result').value = result;
+        }
+        </script>    
+</body>
+
+</html>
