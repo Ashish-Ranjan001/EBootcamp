@@ -1,0 +1,21 @@
+hyperlink : navigation between multiple pages 
+ a tag(anchor tag)
+  -->href=""
+  -->
+
+
+
+
+
+
+  -->TASK
+  proprer menu with deop down 
+  content area-->
+  divide into 2 portion 
+  1. float using - left 20% widhth
+                   Right 80% width
+ proper sidebar 
+ right--> image description/article
+
+ tommorow flexbox
+ 
