@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> JavaScript Program</title>
+    </head>
+    <body>
+        <h2> Callback example</h2>
+        <script>
+          const fetchUser=(uid,callback)=>{
+              console.log("Fetch user from DB");
+              setTimeout(()=>{
+                 callback({name:'Anuj',uid:uid});
+              },2000);
+          }
+          const fetchServicesOfUser=(users,callback)=>{
+              console.log("Fetch user services from DB");
+              setTimeout(()=>{
+                 callback(["A","B","C","D"]);
+              },3000);
+          }
+          const fetchServiceCost=(services,callback)=>{
+              console.log("Fetch user services cost");
+              setTimeout(()=>{
+                 callback(services.length*6000);
+              },4000);
+          }
+        //call nested callbak
+        fetchUser(101,(users)=>{
+             fetchServicesOfUser(users,(services)=>{
+                fetchServiceCost(services,(cost)=>{
+                    console.log(`The cost of services is ${cost}`);
+                })
+             })
+        })
+        </script>
+    </body>
+</html>
+ 
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title> JavaScript Program</title>
+    </head>
+    <body>
+        <h2> Promise example</h2>
+        <script>
+          const fetchUser=(uid)=>{
+            return new Promise((resolve,reject)=>{
+                console.log("Fetch user from DB");
+                setTimeout(()=>{
+                   resolve({name:'Anuj',uid:uid});
+                 },2000);
+            })
+             
+          }
+          const fetchServicesOfUser=(users)=>{
+            return new Promise((resolve,reject)=>{
+                console.log("Fetch user services from DB");
+              setTimeout(()=>{
+                resolve(["A","B","C","D"]);
+              },3000);
+            })
+             
+          }
+          const fetchServiceCost=(services)=>{
+            return new Promise((resolve,reject)=>{
+                console.log("Fetch user services cost");
+              setTimeout(()=>{
+                resolve(services.length*6000);
+              },4000);
+            })
+          }
+         
+        //   fetchUser(101)
+        //   .then(users=> fetchServicesOfUser(users))
+        //   .then(services=> fetchServiceCost(services))
+        //   .then(cost=> console.log(`The cost id ${cost}`))
+        //   .catch(err=> console.log(err))
+       
+        async function findCost(){
+            try{
+            let users=await fetchUser(101);
+            let services=await fetchServicesOfUser(users);
+            let cost=await fetchServiceCost(services);
+            console.log(`The cost is ${cost}`)
+            }
+            catch(err){
+                console.log(err)
+            }
+        }
+        findCost();
+        </script>
+    </body>
+</html>
+  -->
