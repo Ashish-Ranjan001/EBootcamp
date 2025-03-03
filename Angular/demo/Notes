@@ -1,0 +1,26 @@
+when a angular application is landed the app component (default component) is loaded in the index.html 
+---component
+----.ts
+----.html
+----.css
+----.spec.ts = fro testing 
+
+--> Bootstraping
+
+Angular is all about component.
+
+-->How to create component
+>>>ng generate component componentname / ng g c componentname
+>>>>>ng g c component/home
+-------.ts
+-------.html
+-------.css
+-------.spex
+
+>Data Binding
+How we bind or render dynamic data
+--> One Way DB
+->Controller to 
+
+
+--> Two Way DB
