@@ -1,1 +1,13 @@
-<p>about works!</p>
+<h2>{{title}}</h2>
+Enter Title: <input type="text" [(ngModel)]="title"/>
+
+@if (course.length>0) {
+    <h3>coursess</h3>
+    @for (c of course; track $index) {
+        <li>{{c}}</li>
+}
+}
+@else {
+    <p>No courses found</p>
+}
+ 

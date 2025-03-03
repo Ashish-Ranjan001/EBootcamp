@@ -20,7 +20,6 @@ Angular is all about component.
 >Data Binding
 How we bind or render dynamic data
 --> One Way DB
-->Controller to 
-
 
 --> Two Way DB
+    
