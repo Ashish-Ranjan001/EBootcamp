@@ -1,0 +1,21 @@
+<h2> Users Details</h2>
+<table class="table">
+    <tbody>
+        <tr>
+            <th> S.No</th>
+            <th> Name </th>
+            <th> Email </th>
+            <th> Website</th>
+            <th> Phone</th>
+        </tr>
+        @for(user of userData; track user.id ;let i=$index){
+            <tr>
+                <td>{{i+1}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.website}}</td>
+                <td>{{user.phone}}</td>
+            </tr>
+        }
+    </tbody>
+</table>
