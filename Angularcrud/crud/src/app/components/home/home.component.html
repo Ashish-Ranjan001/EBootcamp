@@ -1,0 +1,19 @@
+<section class="container my-2 mr-auto">
+    <h1>Products</h1>
+    <div class="row">
+            @for (product of productData; track product.id) {
+            <div class="col-md-4">
+                <div class="card mb-3 bg-dark border-dark p-1" style="width: 18rem;">
+                    <div class="card-body bg-light">
+                      <h5 class="card-title mx-2">{{product.name}}</h5>
+                      <p class="card-text mx-2">Price:{{product.price}}</p>
+                      <a [routerLink]="['editpro',product.id]" class="btn btn-primary">Edit</a>
+                      <button class="btn btn-danger" (click)="delPro(product.id)"> Delete</button>
+                      <button class="btn btn-secondary" (click)="addCart(product.id)"> Add Cart</button>
+                    </div>
+                  </div>
+           </div>
+        }
+    </div>
+       
+</section>

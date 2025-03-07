@@ -1,0 +1,25 @@
+<h2> Reactive Form Validation</h2>
+<form [formGroup]="myform" (ngSubmit)="postData()">
+    <div class="form-group">
+        <label> Full Name</label>
+        <input type="text" class="form-control" formControlName="fullName"/>
+        <div *ngIf="dd['fullName'].invalid &&  dd['fullName'].touched" class="alert alert-danger">
+           <div *ngIf="dd['fullName'].errors?.['required']">Fullname is required</div>
+           <div *ngIf="dd['fullName'].errors?.['pattern']">Only alphabate Allow</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label> Email</label>
+        <input type="text" class="form-control" formControlName="email"/>
+    </div>
+    <div class="form-group">
+        <label> Mobile</label>
+        <input type="text" class="form-control" formControlName="mobile"/>
+    </div>
+    <div class="form-group">
+        <label> Age</label>
+        <input type="text" class="form-control" formControlName="age"/>
+        <div *ngIf="dd['age'].errors?.['ageError']">Age is in between 18 to 45</div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-success" [disabled]="myform.invalid"/>
+</form>

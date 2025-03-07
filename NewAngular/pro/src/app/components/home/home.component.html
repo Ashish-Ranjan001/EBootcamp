@@ -1,1 +1,8 @@
-<p>home works!</p>
+
+
+ <h2> Communication between parent to child</h2>
+ <!-- load child component -->
+  <button (click)="xyz()"> Counter</button>
+  <app-communication [mycount]="count" (myevent)="mydata($event)"></app-communication>
+  <p> The child data is {{childData}}</p>
+  

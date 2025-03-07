@@ -4,12 +4,14 @@ import { HomeComponent } from './components/home/home.component';
 import { PostComponent } from './components/post/post.component';
 import { UsersComponent } from './components/users/users.component';
 import { FromsComponent } from './components/froms/froms.component';
+import { ReactiveComponent } from './components/reactive/reactive.component';
 
 
 export const routes: Routes = [
     {path:'',component:HomeComponent},
     {path:'posts',component:PostComponent},
     {path:'users',component:UsersComponent},
-    {path:'forms',component:FromsComponent}
+    {path:'forms',component:FromsComponent},
+    {path:'reactive',component:ReactiveComponent}
 
 ];
