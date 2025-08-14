@@ -1,0 +1,19 @@
+Ract--> open source , corss platfrom , maintned by fb 
+
+>>Features 
+-component based architecture
+-JSX suppoty
+-work on virtal dom
+
+>>Installation 
+-npm run dev/npm start 
+
+>>Folder Structure
+-src: is the main file where we work 
+
+>>component:are the core building block of react
+--Type of vpmponents
+
+
+>>Component to component calling 
+-

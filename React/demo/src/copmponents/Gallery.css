@@ -1,0 +1,25 @@
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.photo-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.photo-card img {
+    width: 100%;
+    height: auto;
+}
+
+.photo-card h3 {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+}

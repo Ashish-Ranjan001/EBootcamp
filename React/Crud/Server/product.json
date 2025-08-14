@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": "4",
+      "name": "DP",
+      "price": "100",
+      "quantity": 4
+    },
+    {
+      "id": "4482",
+      "name": "AP",
+      "price": "200",
+      "quantity": "5"
+    },
+    {
+      "id": "4828",
+      "name": "BP",
+      "price": "1000",
+      "quantity": "5"
+    },
+    {
+      "id": "b7a0",
+      "name": "Shampoo",
+      "price": "399",
+      "quantity": "56"
+    }
+  ]
+}

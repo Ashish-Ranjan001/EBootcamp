@@ -1,0 +1,11 @@
+
+.cards-container {
+  padding-left: 10px; /* Adjust the value to reduce space */
+}
+
+.clickable-card {
+  cursor: pointer;
+  flex: 1 1 calc(50% - 20px); /* Adjust the value to fit two cards per row */
+  text-align: center;
+  border-radius: 15px; /* Adjust the value as needed */
+}

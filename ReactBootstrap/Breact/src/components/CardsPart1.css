@@ -1,0 +1,12 @@
+.rounded-image {
+    border-radius: 15px; /* Adjust the value as needed */
+  }
+  
+  .carousel-item {
+    padding: 0 10px; /* Adjust the value to reduce space */
+  }
+  
+  .carousel {
+    margin-left: -10px; /* Adjust the value to reduce space */
+    margin-right: -10px; /* Adjust the value to reduce space */
+  }
